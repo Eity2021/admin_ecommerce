@@ -8,12 +8,12 @@ module.exports = {
     extend: {
       colors: {
         primary: "#213448", 
-        secondary: "#547792",    // Amber
-        accent: "#10B981",       // Emerald
-        background: "#F9FAFB",   // Light Gray background
-        dark: "#111827",         // Dark text
-        light: "#F3F4F6",        // Lighter Gray background
-        danger: "#EF4444",       // Red for delete or errors
+        secondary: "#547792",   
+        accent: "#10B981",  
+        background: "#F9FAFB",   
+        dark: "#111827",    
+        light: "#F3F4F6",      
+        danger: "#EF4444",      
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
@@ -33,6 +33,14 @@ module.exports = {
         "6xl": "3.75rem",  
       },
     },
+    fontFamily: {
+      roboto: ['Roboto', 'sans-serif'],
+    },
+    // padding: {
+    //   'buttonX': '2rem',  
+    //   'buttonY': '.8rem',   
+    //   '5p': '5%',       
+    // },
   },
   plugins: [require('daisyui')],
 }

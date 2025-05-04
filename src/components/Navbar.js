@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link, Routes, Route } from "react-router-dom";
 import routes from "../routes";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, Circle } from "lucide-react";
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [openMenus, setOpenMenus] = useState({});
@@ -35,7 +36,7 @@ export default function Navbar() {
                 className="flex items-center justify-between py-2.5 px-4 cursor-pointer rounded transition duration-200 text-[#fff] hover:bg-gray-700"
                 onClick={() => (link.children ? toggleMenu(link.name) : null)}
               >
-                <Link to={link.path} className="flex-1">
+                <Link to={link.path} className="flex-1 font-roboto text-base">
                   {link.name}
                 </Link>
                 {link.children &&
@@ -52,9 +53,10 @@ export default function Navbar() {
                     <Link
                       key={childIndex}
                       to={`/${child.path}`}
-                      className="block py-2 px-4 text-gray-300 text-sm rounded hover:bg-gray-600 transition duration-200"
+                      className="block py-2 px-4 text-gray-300  rounded hover:bg-gray-600 font-roboto text-base transition duration-200 flex  items-center  gap-2"
                     >
-                      {child.name}
+                   <p className="flex items-center ">{child.icon}</p>
+                 <p className="flex items-center">{child.name}</p>
                     </Link>
                   ))}
                 </div>

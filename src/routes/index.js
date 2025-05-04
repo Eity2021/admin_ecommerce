@@ -6,6 +6,11 @@ import Dashboard from '../pages/home/Dashboard';
 import CategoryLists from '../pages/category/CategoryList';
 import NewCategory from '../pages/category/NewCategory';
 import OrderList from '../pages/order/OrderList';
+import NewSubCategory from '../pages/subCategory/NewSubCategory';
+import { Circle } from 'lucide-react';
+
+
+
 
 const routes= [
   {
@@ -28,8 +33,9 @@ const routes= [
     ),
     children: [
       {
-        path: 'productLists', 
+      path: 'productLists', 
        name:"Product List",
+       icon:<Circle size={16} /> ,
         element: (
           <Suspense fallback={<p>Loading...</p>}>
           <ProductList></ProductList>
@@ -39,6 +45,7 @@ const routes= [
       {
         path: 'addProduct', 
        name:"Add Product",
+       icon:<Circle size={16} /> ,
         element: (
           <Suspense fallback={<p>Loading...</p>}>
      <AddProduct></AddProduct>
@@ -60,6 +67,7 @@ const routes= [
       {
         path: 'categoryLists', 
        name:"Category Lists",
+       icon:<Circle size={16} /> ,
         element: (
           <Suspense fallback={<p>Loading...</p>}>
           <CategoryLists></CategoryLists>
@@ -69,6 +77,7 @@ const routes= [
       {
         path: 'newCategory', 
        name:"New Category",
+       icon:<Circle size={16} /> ,
         element: (
           <Suspense fallback={<p>Loading...</p>}>
      <NewCategory></NewCategory>
@@ -90,6 +99,7 @@ const routes= [
       {
         path: 'subCategoryLists', 
        name:"SubCategory Lists",
+       icon:<Circle size={16} /> ,
         element: (
           <Suspense fallback={<p>Loading...</p>}>
           <CategoryLists></CategoryLists>
@@ -99,9 +109,10 @@ const routes= [
       {
         path: 'newSubCategory', 
        name:"New SubCategory",
+       icon:<Circle size={16} /> ,
         element: (
           <Suspense fallback={<p>Loading...</p>}>
-     <NewCategory></NewCategory>
+     <NewSubCategory></NewSubCategory>
           </Suspense>
         ),
       },
@@ -122,6 +133,7 @@ const routes= [
       {
         path: 'orderList', 
        name:"Order List",
+       icon:<Circle size={16} /> ,
         element: (
           <Suspense fallback={<p>Loading...</p>}>
           <OrderList></OrderList>

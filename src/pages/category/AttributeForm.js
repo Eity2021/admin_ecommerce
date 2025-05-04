@@ -1,67 +1,103 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { ChevronRight, Upload } from "lucide-react"
+
 
 export default function AttributeForm() {
+  const [file, setFile] = useState(null)
+
+  const handleFileChange = (e) => {
+    if (e.target.files && e.target.files[0]) {
+      setFile(e.target.files[0])
+    }
+  }
+
   return (
-<div className="max-w-4xl mx-auto bg-base-100 rounded-box p-8 border border-base-300">
-      <form className="space-y-6">
-        
-        {/* Product Name */}
-        <div>
-          <label htmlFor="productName" className="label">
-            <span className="label-text font-semibold">
-              Product name <span className="text-red-500">*</span>
-            </span>
-          </label>
-          <input
-            type="text"
-            id="productName"
-            placeholder="Enter category name"
-            className="input input-bordered w-full"
-          />
+    <div className="min-h-screen bg-gray-50">
+    <div className="p-6">
+      {/* Header */}
+      <div className="flex justify-between items-center mb-6">
+        <h1 className="text-2xl font-bold text-gray-900">Add Category</h1>
+        <div className="flex items-center text-sm text-gray-500">
+          <a href="#" className="hover:text-gray-700">Dashboard</a>
+          <ChevronRight className="h-4 w-4 mx-2" />
+          <a href="#" className="hover:text-gray-700">Category</a>
+          <ChevronRight className="h-4 w-4 mx-2" />
+          <span className="text-gray-700">New category</span>
+        </div>
+      </div>
+
+      {/* Form Card */}
+      <div className="bg-white rounded-lg shadow p-6">
+        {/* Input Fields */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+     
+
+          <div>
+            <label htmlFor="category-name" className="block text-sm font-medium text-gray-900 mb-1">
+              Category name<span className="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              id="category-name"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="product-name" className="block text-sm font-medium text-gray-900 mb-1">
+              Color Code 
+            </label>
+            <input
+              type="text"
+              id="product-name"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              required
+            />
+          </div>
         </div>
 
-        {/* Upload Image */}
-        <div>
-          <label htmlFor="imageUpload" className="text-sm font-medium flex items-center gap-1">
-            Upload images
-            <span className="text-red-500">*</span>
+        {/* File Upload */}
+        <div className="mb-6">
+          <label className="block text-sm font-medium text-gray-900 mb-1">
+            Upload images <span className="text-red-500">*</span>
           </label>
-          <div className="mt-1.5 border-2 border-dashed border-blue-100 rounded-lg p-8">
+          <div className="border border-dashed border-blue-300 rounded-lg p-6 bg-blue-50">
             <div className="flex flex-col items-center justify-center text-center">
-              <div className="p-4 rounded-full bg-blue-50">
-                <svg className="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-                </svg>
+              <div className="w-12 h-12 mb-4 bg-white rounded-full flex items-center justify-center shadow-sm">
+                <Upload className="h-6 w-6 text-blue-500" />
               </div>
-              <p className="mt-4 text-sm text-gray-600">
-                Drop your images here or select{' '}
-                <span className="text-blue-500 hover:underline cursor-pointer">
+              <p className="text-gray-500 mb-2">
+                Drop your images here or{" "}
+                <label htmlFor="file-upload" className="text-blue-500 cursor-pointer underline">
                   click to browse
-                </span>
+                </label>
               </p>
+              <input
+                id="file-upload"
+                type="file"
+                className="hidden"
+                onChange={handleFileChange}
+                accept="image/*"
+              />
+              {file && (
+                <p className="text-sm text-green-600 mt-2">Selected: {file.name}</p>
+              )}
             </div>
-
           </div>
-          </div>
-        {/* Select Icon */}
-        <div>
-          <label htmlFor="categoryIcon" className="label">
-            <span className="label-text font-semibold">Select category icon</span>
-          </label>
-          <select className="select select-bordered w-full" id="categoryIcon">
-            <option disabled selected>Select icon</option>
-            <option>🥫 Food</option>
-            <option>🧸 Toy</option>
-            <option>🎀 Accessory</option>
-          </select>
         </div>
 
-        {/* Save Button */}
-        <button type="submit" className="btn btn-primary w-full">
-          Save
-        </button>
 
-      </form>
+        {/* Submit Button */}
+        <div className='flex justify-end'>
+          <button
+            type="submit"
+            className="px-[3rem] py-[.8rem] bg-primary text-white font-medium rounded-md hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 font-roboto"
+          >
+            Save Category
+          </button>
+        </div>
+      </div>
     </div>
+  </div>
   )
 }
