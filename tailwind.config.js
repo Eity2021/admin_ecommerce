@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js,jsx}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   daisyui: {
     themes: ["white"],
   },
@@ -18,7 +18,7 @@ module.exports = {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
-        body: ['Roboto', 'sans-serif'],
+         lato: ['Lato', 'sans-serif'],
       },
       fontSize: {
         xs: "0.75rem",     
