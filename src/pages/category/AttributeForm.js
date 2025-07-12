@@ -12,7 +12,7 @@ export default function AttributeForm() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen ">
     <div className="p-6">
       {/* Header */}
       <div className="flex justify-between items-center mb-6">
@@ -39,7 +39,7 @@ export default function AttributeForm() {
             <input
               type="text"
               id="category-name"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-primary"
             />
           </div>
 
@@ -50,7 +50,7 @@ export default function AttributeForm() {
             <input
               type="text"
               id="product-name"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-primary"
               required
             />
           </div>

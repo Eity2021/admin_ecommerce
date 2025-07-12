@@ -57,7 +57,7 @@ export default function NewSubCategory() {
 
           <div>
             <label htmlFor="category-name" className="block text-sm font-medium text-gray-900 mb-1">
-              Category name<span className="text-red-500">*</span>
+              Sub Category name<span className="text-red-500">*</span>
             </label>
             <input
               type="text"

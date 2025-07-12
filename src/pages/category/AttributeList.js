@@ -1,5 +1,5 @@
 import React from 'react'
-import { Eye, Pencil, Trash2,ChevronRight,ChevronLeft   } from "lucide-react";
+import { Eye, Pencil, Trash2,ChevronRight,ChevronLeft,Search    } from "lucide-react";
 export default function AttributeList() {
     const attributes = [
         { id: 1, subCategory: "Dried food", icon: "🥫", quantity: 1638 },
@@ -27,16 +27,18 @@ export default function AttributeList() {
       </div>
 
       <div className="flex items-center gap-4">
-        <div className="relative">
+
+        <div className="relative z-0">
           <input 
             type="search" 
             placeholder="Search here..." 
             className="pl-4 pr-10 py-2 w-64"
           />
           <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400">
-            🔍
+            <Search></Search>
           </span>
         </div>
+
         <button className="bg-primary hover:bg-secondary text-white px-8 py-2 rounded-lg flex items-center gap-2">
           <span>+</span> Add new
         </button>
@@ -44,7 +46,7 @@ export default function AttributeList() {
     </div>
 
     <div className="overflow-x-auto">
-      <table className="min-w-full">
+      <table className="w-full">
         <thead>
           <tr className="border-b">
             <th className="text-left p-4 text-base">Image</th>

@@ -1,5 +1,4 @@
-import React from 'react'
-import Navbar from '../../components/Navbar'
+import Navbar from '../../constants/navbar/SideNavbar'
 
 export default function Main() {
   return (

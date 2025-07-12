@@ -11,7 +11,7 @@ export default function AddProduct() {
     }
   };
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       <div className="p-6">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
