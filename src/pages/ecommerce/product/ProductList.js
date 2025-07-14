@@ -97,20 +97,20 @@ const handleClose = () => {
         <table className="min-w-full">
           <thead>
             <tr className="border-b">
-              <th className="text-left p-4 text-base font-lato-bold uppercase">
+              <th className="text-left p-4 text-base font-lato- font-bold uppercase">
                 Image
               </th>
-              <th className="text-left p-4 text-base font-lato-bold uppercase">
+              <th className="text-left p-4 text-base font-lato- font-bold uppercase">
                 Category
               </th>
               {/* <th className="text-left p-4">Icon</th> */}
-              <th className="text-left p-4 text-base font-lato-bold uppercase">
+              <th className="text-left p-4 text-base font-lato font-bold uppercase">
                 Quantity
               </th>
-              <th className="text-left p-4 text-base font-lato-bold uppercase">
+              <th className="text-left p-4 text-base font-lato font-bold uppercase">
                 Sale
               </th>
-              <th className="text-left p-4 text-base font-lato-bold uppercase">
+              <th className="text-left p-4 text-base font-lato font-bold uppercase">
                 Action
               </th>
             </tr>
@@ -123,7 +123,7 @@ const handleClose = () => {
                 </td>
                 <td className="p-4 flex items-center gap-2">
                   {" "}
-                  <span className="font-medium  text-primary font-lato-regular">
+                  <span className="font-medium  text-primary font-lato">
                     {item.category}
                   </span>
                 </td>
