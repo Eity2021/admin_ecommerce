@@ -3,7 +3,8 @@ import './charts.css';
 const data = [
     { name: 'Jun', uv: 400, pv: 2400, amt: 2400 },
     { name: 'July', uv: 300, pv: 2210, amt: 2290 },
-    { name: 'August', uv: 200, pv: 2290, amt: 2000 },
+    { name: 'Aug', uv: 200, pv: 2290, amt: 2000 },
+    { name: 'Sept', uv: 500, pv: 2290, amt: 4000 },
 ];
 
 
