@@ -1,7 +1,14 @@
-import { FileText, CheckCircle, Clock, Trash2, TrendingUp, TrendingDown } from "lucide-react"
+import {
+  FileText,
+  CheckCircle,
+  Clock,
+  Trash2,
+  TrendingUp,
+  TrendingDown,
+} from "lucide-react";
 
 export default function Cards() {
-      const invoiceData = [
+  const invoiceData = [
     {
       title: "INVOICES SENT",
       amount: "$559.25k",
@@ -50,13 +57,13 @@ export default function Cards() {
       iconColor: "text-purple-600",
       badgeColor: "bg-purple-500",
     },
-  ] 
+  ];
   return (
- <div >
-      <div className="container mx-auto p-6">
+    <div>
+      <div className="container mx-auto md:p-0 p-6 mb-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
           {invoiceData.map((item, index) => {
-            const IconComponent = item.icon
+            const IconComponent = item.icon;
             return (
               <div
                 key={index}
@@ -64,7 +71,9 @@ export default function Cards() {
               >
                 <div className="card-body">
                   <div className="flex items-center justify-between mb-2">
-                    <h2 className="card-title text-sm text-gray-700">{item.title}</h2>
+                    <h2 className="card-title text-sm text-gray-700">
+                      {item.title}
+                    </h2>
                     <div className="flex items-center gap-1">
                       {item.isPositive ? (
                         <TrendingUp className="w-4 h-4 text-green-500" />
@@ -72,8 +81,9 @@ export default function Cards() {
                         <TrendingDown className="w-4 h-4 text-red-500" />
                       )}
                       <span
-                        className={`text-sm font-medium ${item.isPositive ? "text-green-500" : "text-red-500"
-                          }`}
+                        className={`text-sm font-medium ${
+                          item.isPositive ? "text-green-500" : "text-red-500"
+                        }`}
                       >
                         {item.change}
                       </span>
@@ -81,12 +91,18 @@ export default function Cards() {
                   </div>
                   <div className="flex items-center justify-between">
                     <div>
-                      <div className="text-3xl font-bold text-gray-900 mb-2">{item.amount}</div>
+                      <div className="text-3xl font-bold text-gray-900 mb-2">
+                        {item.amount}
+                      </div>
                       <div className="flex items-center gap-2">
-                        <div className={`badge ${item.badgeColor} text-white text-xs py-1 px-2 rounded-sm`}>
+                        <div
+                          className={`badge ${item.badgeColor} text-white text-xs py-1 px-2 rounded-sm`}
+                        >
                           {item.count}%
                         </div>
-                        <span className="text-sm text-gray-500">{item.description}</span>
+                        <span className="text-sm text-gray-500">
+                          {item.description}
+                        </span>
                       </div>
                     </div>
                     <div className="w-12 h-12 bg-white/60 rounded-lg flex items-center justify-center">
@@ -95,10 +111,10 @@ export default function Cards() {
                   </div>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
       </div>
     </div>
-  )
+  );
 }

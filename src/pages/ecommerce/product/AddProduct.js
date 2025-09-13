@@ -61,8 +61,6 @@ export default function AddProduct() {
               />
             </div>
 
-        
-
             <div class="relative w-full">
               <label
                 for="category-name"
@@ -94,7 +92,7 @@ export default function AddProduct() {
               </div>
             </div>
 
-     <div>
+            <div>
               <label
                 htmlFor="category-name"
                 className="block text-sm font-medium text-gray-900 mb-1"
@@ -113,15 +111,13 @@ export default function AddProduct() {
                 for="category-name"
                 class="block text-sm font-medium text-gray-900 mb-1"
               >
-               Select Date <span class="text-red-500">*</span>
+                Select Date <span class="text-red-500">*</span>
               </label>
 
               <div>
-              <CustomCalender   
-               onSelect={(selected) => setDate(selected)}
-         />
+                <CustomCalender onSelect={(selected) => setDate(selected)} />
               </div>
-          </div>
+            </div>
 
             <div>
               <label
@@ -346,26 +342,20 @@ export default function AddProduct() {
                 </label>
               </div>
             </div>
-
-       
-
           </div>
 
-
           <div>
-              <label
-                for="category-name"
-                class="block text-sm font-medium text-gray-900 mb-1"
-              >
-                Product Description <span class="text-red-500">*</span>
-              </label>
-              <textarea
-                class="w-full h-32 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-primaryresize-none"
-                placeholder="Enter your message here..."
-              ></textarea>
-            </div>
-
-
+            <label
+              for="category-name"
+              class="block text-sm font-medium text-gray-900 mb-1"
+            >
+              Product Description <span class="text-red-500">*</span>
+            </label>
+            <textarea
+              class="w-full h-32 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-primaryresize-none"
+              placeholder="Enter your message here..."
+            ></textarea>
+          </div>
 
           {/* File Upload */}
           <div className="mb-6">

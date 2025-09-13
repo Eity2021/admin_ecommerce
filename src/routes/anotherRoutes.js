@@ -1,16 +1,14 @@
-import React, { Suspense } from 'react';
-import About from '../pages/about/About';
+import { Suspense } from "react";
+import About from "../pages/about/About";
 
-const anotherRoutes= [
-
+const anotherRoutes = [
   {
-    path: '/about',
+    path: "/about",
     element: (
       <Suspense fallback={<p>Loading...</p>}>
         <About />
       </Suspense>
     ),
-
   },
 ];
 
