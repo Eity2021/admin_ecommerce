@@ -170,7 +170,7 @@ export default function HomeRecentOrdersList() {
             <button className="h-8 w-8 flex items-center justify-center rounded hover:bg-gray-100">
               ←
             </button>
-            <button className="h-8 w-8 flex items-center justify-center rounded bg-blue-600 text-white">
+            <button className="h-8 w-8 flex items-center justify-center rounded bg-primary text-white">
               1
             </button>
             <button className="h-8 w-8 flex items-center justify-center rounded hover:bg-gray-100">

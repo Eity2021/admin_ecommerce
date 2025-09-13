@@ -60,9 +60,6 @@ export default function WidthBarCharts() {
   return (
     <div>
       <div className="w-full h-96 bg-white p-4 rounded-md">
-        {/* <h1 className="pl-20 pb-1 text-[26px] font-roboto font-semibold">
-          Recent Order
-        </h1> */}
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             width={500}
