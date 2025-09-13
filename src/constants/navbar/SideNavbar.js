@@ -23,9 +23,9 @@ export default function SideNavbar() {
   return (
     <div className="flex min-h-screen">
       <div
-        className={`bg-gray-800 text-white w-72 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform z-20 ${
+        className={`bg-gray-800 text-white w-72 h-full space-y-6 py-7 px-2 fixed transform z-20 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } md:relative md:translate-x-0 transition duration-300 ease-in-out`}
+        } md:translate-x-0 transition duration-300 ease-in-out`}
       >
         <div className="flex justify-around mb-10">
           <h1 className="text-2xl font-semibold text-center ">E-Commerce</h1>
@@ -49,7 +49,7 @@ export default function SideNavbar() {
                   className="flex-1 flex gap-2 font-roboto text-base"
                 >
                   <p className="flex items-center">{link.icon}</p>
-                  <p className="flex items-center"> {link.name}</p>
+                  <p className="flex items-center">{link.name}</p>
                 </Link>
 
                 {link.children &&
@@ -72,9 +72,9 @@ export default function SideNavbar() {
                     <Link
                       key={childIndex}
                       to={`/${child.path}`}
-                      className=" py-2 px-4 text-gray-300  rounded hover:bg-gray-600 font-roboto text-base transition duration-200 flex  items-center  gap-2"
+                      className="py-2 px-4 text-gray-300 rounded hover:bg-gray-600 font-roboto text-base transition duration-200 flex items-center gap-2"
                     >
-                      <p className="flex items-center ">{child.icon}</p>
+                      <p className="flex items-center">{child.icon}</p>
                       <p className="flex items-center">{child.name}</p>
                     </Link>
                   ))}
@@ -92,8 +92,8 @@ export default function SideNavbar() {
         ></div>
       )}
 
-      <div className="flex-1 flex flex-col">
-        <Header isOpe={isOpen} setIsOpen={setIsOpen}></Header>
+      <div className="flex-1 flex flex-col md:ml-72">
+        <Header isOpe={isOpen} setIsOpen={setIsOpen} />
 
         <main className="flex-1 p-6 bg-gray-100">
           <Routes>{renderRoutes(routes)}</Routes>
