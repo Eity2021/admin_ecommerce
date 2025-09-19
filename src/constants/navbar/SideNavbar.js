@@ -3,6 +3,7 @@ import { Link, Routes, Route } from "react-router-dom";
 import routes from "../../routes";
 import { ChevronDown, ChevronUp, Menu } from "lucide-react";
 import Header from "../../constants/header/Header";
+import anotherRoutes from "../../routes/anotherRoutes";
 export default function SideNavbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [openMenus, setOpenMenus] = useState({});
@@ -97,6 +98,7 @@ export default function SideNavbar() {
 
         <main className="flex-1 p-6 bg-gray-100">
           <Routes>{renderRoutes(routes)}</Routes>
+          <Routes>{renderRoutes(anotherRoutes)}</Routes>
         </main>
       </div>
     </div>

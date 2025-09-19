@@ -1,12 +1,12 @@
 import { Suspense } from "react";
-import About from "../pages/about/About";
+import Profile from "../constants/profileSettings/Profile";
 
 const anotherRoutes = [
   {
-    path: "/about",
+    path: "/profile",
     element: (
       <Suspense fallback={<p>Loading...</p>}>
-        <About />
+        <Profile />
       </Suspense>
     ),
   },
